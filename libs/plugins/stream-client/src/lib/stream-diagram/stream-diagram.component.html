@@ -18,7 +18,17 @@
       (select)="selectStage($event)"
       (remove)="onDiagramAction($event)"
       (configure)="onDiagramAction($event)"
-    ></flogo-diagram-tile-task>
+    >
+      <flogo-diagram-tile-placeholder
+        *cdkDragPlaceholder
+      ></flogo-diagram-tile-placeholder>
+      <ng-template cdkDragPreview [matchSize]="true">
+        <flogo-diagram-tile-preview
+          [id]="tile?.task?.id"
+          [title]="tile?.task?.title"
+        ></flogo-diagram-tile-preview>
+      </ng-template>
+    </flogo-diagram-tile-task>
   </div>
   <flogo-diagram-tile-insert
     fgAddStage

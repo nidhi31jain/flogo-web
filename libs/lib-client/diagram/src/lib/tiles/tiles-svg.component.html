@@ -65,5 +65,17 @@
         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
       />
     </filter>
+    <filter id="flogo-diagram-tile__shadow--preview">
+      <feOffset dx="-2" dy="2" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+      <feGaussianBlur
+        in="shadowOffsetOuter3"
+        result="shadowBlurOuter3"
+        stdDeviation="4"
+      ></feGaussianBlur>
+      <feColorMatrix
+        in="shadowBlurOuter3"
+        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"
+      ></feColorMatrix>
+    </filter>
   </defs>
 </svg>

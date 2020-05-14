@@ -12,11 +12,20 @@ import { TileTaskComponent } from './tiles/tile-task.component';
 import { TileBranchComponent } from './tiles/tile-branch.component';
 import { TileSsvgComponent } from './tiles/tiles-svg';
 import { DragTileService } from './drag-tiles';
+import { TilePlaceholderComponent } from './tiles/tile-placeholder.component';
+import { TilePreviewComponent } from './tiles/tile-preview.component';
 
 @NgModule({
   imports: [CommonModule, LanguageModule, DragDropModule],
 
-  exports: [DiagramComponent, TileInsertComponent, TileTaskComponent, TileSsvgComponent],
+  exports: [
+    DiagramComponent,
+    TileInsertComponent,
+    TileTaskComponent,
+    TileSsvgComponent,
+    TilePlaceholderComponent,
+    TilePreviewComponent,
+  ],
   declarations: [
     DiagramComponent,
     DiagramRowComponent,
@@ -24,6 +33,8 @@ import { DragTileService } from './drag-tiles';
     TileBranchComponent,
     TileTaskComponent,
     TileSsvgComponent,
+    TilePlaceholderComponent,
+    TilePreviewComponent,
   ],
   providers: [DragTileService],
 })
